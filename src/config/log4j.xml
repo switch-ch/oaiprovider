@@ -22,7 +22,7 @@
 	<!-- Use this appender to have logs go to a rolling set of log files -->
 	<appender name="RollingFile"
 		class="org.apache.log4j.RollingFileAppender">
-		<param name="File" value="/tmp/proai/log/proai.log" />
+		<param name="File" value="/opt/fedora/server/logs/services/proai.log" />
 		<param name="MaxFileSize" value="20MB" />
 		<param name="MaxBackupIndex" value="5" />
 		<layout class="org.apache.log4j.PatternLayout">
@@ -68,7 +68,7 @@
 	<!-- Default level and appender if not explicitly defined -->
 	<root>
 		<priority value="WARN" />
-		<appender-ref ref="Console" />
+		<appender-ref ref="RollingFile" />
 	</root>
 
 </log4j:configuration>
